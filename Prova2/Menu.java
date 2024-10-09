@@ -105,7 +105,7 @@ public class Menu {
                     }
                     for (Professor professor : Professor.professores){
                         System.out.println("Id: " + professor.IdProfessor + " - Nome: " + professor.Nome + " - Departamrnto: " 
-                        + professor.Departamento + " - Curso: " + Professor.CursosLecionados(professor.IdProfessor) + " - Qtd de alunos: " + Curso.contarAlunosPorCurso(professor.IdProfessor));
+                        + professor.Departamento + " - Curso: " + Professor.cursoProfessores(professor.IdProfessor) + " - Qtd de alunos: " + Curso.contarAlunosPorCurso(professor.IdProfessor));
                     }
                     break;
 
@@ -117,7 +117,7 @@ public class Menu {
                         return;
                     }
                     for(Curso curso : Curso.cursos){
-                        System.out.println("Cursos: " + curso.Nome2 + " - Id: " + curso.IdCurso + " - Carga horaria: " + curso.Carga_hora + " - Professor: " + Curso.professoresCurso(curso.IdProfessor) + " - Qtd alunos: " + Curso.contarAlunosPorCurso(curso.IdCurso));
+                        System.out.println("Cursos: " + curso.Nome2 + " - Id: " + curso.IdCurso + " - Carga horaria: " + curso.Carga_hora + " - Professor: " +  Professor.buscaProfessor(curso.IdProfessor).Nome + " - Qtd alunos: " + Curso.contarAlunosPorCurso(curso.IdCurso));
                     }
                     break;
 

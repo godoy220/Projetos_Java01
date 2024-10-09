@@ -47,7 +47,7 @@ public class Professor {
         return null;
     }
 
-    static String CursosLecionados(int IdProfessor) {
+    static String cursoProfessores(int IdProfessor) {
         String cursos = "";
         for (Curso curso : Curso.cursos) {
             if (curso.IdProfessor == IdProfessor) {
